@@ -7,13 +7,17 @@ description: Use when working on WordPress projects in DDEV, WP-CLI, wp db, them
 
 Use this skill for WordPress project behavior.
 
-Always load `office-ddev` whenever this skill is used. Use `office-ddev` for SSH access, path mapping, DDEV routing, and environment-specific commands. Use this skill for WordPress-specific workflows such as WP-CLI, themes, plugins, users, options, imports, exports, and admin behavior.
+Always load `office-ddev` whenever this skill is used. Use `office-ddev` for `/srv/projects` path mapping, DDEV routing, known project details, and environment-specific safety rules. Use this skill for WordPress-specific workflows such as WP-CLI, themes, plugins, users, options, imports, exports, and admin behavior.
 
 ## Command Pattern
 
-Run WordPress commands through DDEV in the project environment:
+Run WordPress commands through DDEV from the project directory.
 
-`cd <project-path> && ddev wp <command>`
+Set the tool `workdir` to `/srv/projects/<project>` and run:
+
+`ddev wp <command>`
+
+Do not prefix normal WordPress/DDEV commands with `ssh office-dev` and do not chain `cd`; the assistant should already be running in the local Remote-SSH server environment.
 
 Examples:
 

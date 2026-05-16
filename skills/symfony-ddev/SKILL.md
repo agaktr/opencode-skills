@@ -7,13 +7,17 @@ description: Use when working on Symfony projects in DDEV, Doctrine, doctrine:mi
 
 Use this skill for Symfony project behavior.
 
-Always load `office-ddev` whenever this skill is used. Use `office-ddev` for SSH access, path mapping, DDEV routing, and environment-specific commands. Use this skill for Symfony-specific workflows such as Console, Doctrine, migrations, Messenger, fixtures, cache, tests, and Symfony assets.
+Always load `office-ddev` whenever this skill is used. Use `office-ddev` for `/srv/projects` path mapping, DDEV routing, known project details, and environment-specific safety rules. Use this skill for Symfony-specific workflows such as Console, Doctrine, migrations, Messenger, fixtures, cache, tests, and Symfony assets.
 
 ## Command Pattern
 
-Run Symfony commands through DDEV in the project environment:
+Run Symfony commands through DDEV from the project directory.
 
-`cd <project-path> && ddev exec php bin/console <command>`
+Set the tool `workdir` to `/srv/projects/<project>` and run:
+
+`ddev exec php bin/console <command>`
+
+Do not prefix normal Symfony/DDEV commands with `ssh office-dev` and do not chain `cd`; the assistant should already be running in the local Remote-SSH server environment.
 
 Examples:
 
