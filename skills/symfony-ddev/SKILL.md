@@ -5,7 +5,9 @@ description: Use when working on Symfony projects in DDEV, Doctrine, doctrine:mi
 
 # Symfony DDEV Standards
 
-Use this skill for Symfony project behavior. Pair it with your own environment-specific skill or project instructions for hostnames, path mapping, and deployment boundaries.
+Use this skill for Symfony project behavior.
+
+Always load `office-ddev` whenever this skill is used. Use `office-ddev` for SSH access, path mapping, DDEV routing, and environment-specific commands. Use this skill for Symfony-specific workflows such as Console, Doctrine, migrations, Messenger, fixtures, cache, tests, and Symfony assets.
 
 ## Command Pattern
 

@@ -5,7 +5,9 @@ description: Use when working on WordPress projects in DDEV, WP-CLI, wp db, them
 
 # WordPress DDEV Standards
 
-Use this skill for WordPress project behavior. Pair it with your own environment-specific skill or project instructions for hostnames, path mapping, and deployment boundaries.
+Use this skill for WordPress project behavior.
+
+Always load `office-ddev` whenever this skill is used. Use `office-ddev` for SSH access, path mapping, DDEV routing, and environment-specific commands. Use this skill for WordPress-specific workflows such as WP-CLI, themes, plugins, users, options, imports, exports, and admin behavior.
 
 ## Command Pattern
 
