@@ -33,11 +33,13 @@ Use WP-CLI database commands for WordPress database work:
 
 Prefer `ddev wp db ...` over `ddev mysql` for WordPress database tasks because WP-CLI runs in the WordPress context and uses the configured database.
 
-Before destructive or broad database operations, make a local DDEV export unless the user explicitly says not to:
+Before destructive or broad database operations, make a local DDEV database export unless the user explicitly says not to:
 
-`ddev wp db export var/backups/db-before-change.sql`
+`ddev export-db --file=<file>`
 
 Do not connect directly to production databases. Do not use production credentials unless the user explicitly confirms the exact production action.
+
+Do not expose or commit salts, API keys, SMTP/payment credentials, production URLs, or other secrets from `wp-config.php`, `.env`, database options, or exports.
 
 ## Search Replace
 
